@@ -3,24 +3,24 @@
 
 ## Write a short comment describing this function
 
-
-## Vector example
-# makeVector <- function(x = numeric()) {
-#  m <- NULL
-#  set <- function(y) {
-#    x <<- y
-#    m <<- NULL
-#  }
-#  get <- function() x
-#  setmean <- function(mean) m <<- mean
-#  getmean <- function() m
-#  list(set = set, get = get,
-#       setmean = setmean,
-#       getmean = getmean)
-#}
+# makeCacheMatrix is a list of:
+# set the matrix value
+# get the matrix value
+# set the inverse value of the matrix
+# get the inverse value of the matrix
 
 makeCacheMatrix <- function(x = matrix()) {
-  
+  m <- NULL
+    set <- function(y) {
+      x <<- y
+      m <<- NULL
+    }
+  get <- function() x
+  setInv <- function(Inv) m <<- Inv
+  getInv <- function() m
+  list(set = set, get = get,
+              setInv = setInv,
+              getInv = getInv)
 }
 
 
